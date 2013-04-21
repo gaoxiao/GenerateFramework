@@ -1,0 +1,56 @@
+
+2013-04-20 21:04:34
+[ERROR]-[Thread: main]-[freemarker.log.Log4JLoggerFactory$Log4JLogger.error()]: Template processing error: "Expression javaPackageName is undefined on line 1, column 11 in Controller.ftl."
+
+Expression javaPackageName is undefined on line 1, column 11 in Controller.ftl.
+The problematic instruction:
+----------
+==> ${javaPackageName} [on line 1, column 9 in Controller.ftl]
+----------
+
+Java backtrace for programmers:
+----------
+freemarker.core.InvalidReferenceException: Expression javaPackageName is undefined on line 1, column 11 in Controller.ftl.
+	at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:125)
+	at freemarker.core.Expression.getStringValue(Expression.java:118)
+	at freemarker.core.Expression.getStringValue(Expression.java:93)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.Environment.process(Environment.java:199)
+	at freemarker.template.Template.process(Template.java:259)
+	at com.zjedu.Genetrator.gene(Genetrator.java:81)
+	at com.zjedu.Genetrator.geneController(Genetrator.java:48)
+	at com.zjedu.Genetrator.main(Genetrator.java:38)
+
+2013-04-20 21:52:52
+[ERROR]-[Thread: main]-[freemarker.log.Log4JLoggerFactory$Log4JLogger.error()]: Template processing error: "Expression meta.colName is undefined on line 2, column 11 in View_js.ftl."
+
+Expression meta.colName is undefined on line 2, column 11 in View_js.ftl.
+The problematic instruction:
+----------
+==> ${meta.colName} [on line 2, column 9 in View_js.ftl]
+----------
+
+Java backtrace for programmers:
+----------
+freemarker.core.InvalidReferenceException: Expression meta.colName is undefined on line 2, column 11 in View_js.ftl.
+	at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:125)
+	at freemarker.core.Expression.getStringValue(Expression.java:118)
+	at freemarker.core.Expression.getStringValue(Expression.java:93)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.IteratorBlock$Context.runLoop(IteratorBlock.java:179)
+	at freemarker.core.Environment.visit(Environment.java:428)
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:102)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.Environment.process(Environment.java:199)
+	at freemarker.template.Template.process(Template.java:259)
+	at com.zjedu.Genetrator.gene(Genetrator.java:105)
+	at com.zjedu.Genetrator.geneView(Genetrator.java:63)
+	at com.zjedu.Genetrator.main(Genetrator.java:46)

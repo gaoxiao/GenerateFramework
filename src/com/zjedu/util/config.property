@@ -1,0 +1,19 @@
+jdbcUrl = jdbc:mysql://localhost:3306/jfinal_demo?characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+user = root
+password = root
+devMode = true
+
+#定义java包名
+javaPackageName = com.zjedu.jf
+
+#定义java文件存放路径
+javaFloder = temp/java/
+
+#定义js文件存放路径
+jsFloder = temp/js/
+
+# 定义模板文件
+ControllerFtl = Controller.ftl
+ModelFtl = Model.ftl
+ViewFtl = View_js.ftl
+FormFtl = Form_jsl.ftl
