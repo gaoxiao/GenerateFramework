@@ -12,8 +12,12 @@ javaFloder = temp/java/
 #定义js文件存放路径
 jsFloder = temp/js/
 
+#定义conf文件存放路径
+confFolder = temp/conf/
+
 # 定义模板文件
 ControllerFtl = Controller.ftl
 ModelFtl = Model.ftl
 ViewFtl = View_js.ftl
 FormFtl = Form_jsl.ftl
+ConfFtl = Conf.ftl

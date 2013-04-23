@@ -6,7 +6,7 @@ import java.io.InputStream;
 import java.net.URISyntaxException;
 import java.util.Properties;
 
-import com.jfinal.kit.StringKit;
+import com.mysql.jdbc.StringUtils;
 
 public class PropertyUtil {
 	private static Properties properties;
@@ -20,7 +20,7 @@ public class PropertyUtil {
 	}
 
 	public static Properties loadPropertyFile(String file) {
-		if (StringKit.isBlank(file))
+		if (StringUtils.isNullOrEmpty(file))
 			throw new IllegalArgumentException(
 					"Parameter of file can not be blank");
 		if (file.contains(".."))

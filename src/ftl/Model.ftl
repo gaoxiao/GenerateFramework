@@ -1,4 +1,4 @@
-package ${javaPackageName}.${tableName};
+package ${javaPackageName}.${tableNameLowerCase};
 
 import com.jfinal.plugin.activerecord.Model;
 

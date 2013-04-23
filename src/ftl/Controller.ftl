@@ -1,11 +1,9 @@
-package ${javaPackageName}.${tableName};
+package ${javaPackageName}.${tableNameLowerCase};
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-import com.htsoft.core.util.ContextUtil;
-import com.htsoft.oa.model.system.AppUser;
 import com.jfinal.core.Controller;
 import com.jfinal.upload.UploadFile;
 

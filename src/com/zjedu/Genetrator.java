@@ -29,6 +29,7 @@ public class Genetrator {
 	private final static String ModelFtl = PropertyUtil.getProperty("ModelFtl");
 	private final static String ViewFtl = PropertyUtil.getProperty("ViewFtl");
 	private final static String FormFtl = PropertyUtil.getProperty("FormFtl");
+	private final static String ConfFtl = PropertyUtil.getProperty("ConfFtl");
 
 	public static void main(String[] args) {
 		String tableName;
@@ -45,11 +46,28 @@ public class Genetrator {
 		geneController(tableName);
 		geneView(tableName);
 		geneForm(tableName);
+		geneConf(tableName);
+	}
+
+	private static void geneConf(String tableName) {
+		Map<String, Object> vo = new HashMap<String, Object>();
+		vo.put("tableName", tableName);
+		vo.put("tableNameLowerCase", tableName.toLowerCase());
+		String filePath = PropertyUtil.getProperty("confFolder")
+				+ tableName.toLowerCase() + "/" + tableName + "Config.txt";
+		gene(vo, ConfFtl, filePath);
+
 	}
 
 	private static void geneForm(String tableName) {
-		// TODO Auto-generated method stub
-
+		List<DBMeta> metas = SqlUtil.getMetadata(tableName);
+		Map<String, Object> vo = new HashMap<String, Object>();
+		vo.put("tableName", tableName);
+		vo.put("tableNameLowerCase", tableName.toLowerCase());
+		vo.put("metas", metas);
+		String filePath = PropertyUtil.getProperty("jsFloder")
+				+ tableName.toLowerCase() + "/" + tableName + "Form.js";
+		gene(vo, FormFtl, filePath);
 	}
 
 	private static void geneView(String tableName) {
@@ -59,7 +77,7 @@ public class Genetrator {
 		vo.put("tableNameLowerCase", tableName.toLowerCase());
 		vo.put("metas", metas);
 		String filePath = PropertyUtil.getProperty("jsFloder")
-				+ tableName.toLowerCase() + "/My" + tableName + "View.js";
+				+ tableName.toLowerCase() + "/" + tableName + "View.js";
 		gene(vo, ViewFtl, filePath);
 	}
 
@@ -76,6 +94,7 @@ public class Genetrator {
 	private static void geneModel(String tableName) {
 		Map<String, Object> vo = new HashMap<String, Object>();
 		vo.put("tableName", tableName);
+		vo.put("tableNameLowerCase", tableName.toLowerCase());
 		// 在配置文件中配置包名
 		vo.put("javaPackageName", PropertyUtil.getProperty("javaPackageName"));
 		String filePath = PropertyUtil.getProperty("javaFloder") + tableName

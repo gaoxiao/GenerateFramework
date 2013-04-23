@@ -1,18 +1,18 @@
-MyNewsForm = Ext.extend(Ext.Window, {
+My${tableName}Form = Ext.extend(Ext.Window, {
 	imagePanlbar : null,
 	constructor : function(b) {
 		Ext.applyIf(this, b);
 		this.initUIComponents();
-		MyNewsForm.superclass.constructor.call(this, {
-			id : "MyNewsFormWin",
+		My${tableName}Form.superclass.constructor.call(this, {
+			id : "My${tableName}FormWin",
 			layout : "fit",
 			items : this.formPanel,
 			modal : true,
 			height : 550,
 			width : 1030,
 			maximizable : true,
-			iconCls : "menu-news",
-			title : "添加新闻",
+			iconCls : "menu-${tableNameLowerCase}",
+			title : "编辑${tableName}",
 			buttonAlign : "center",
 			buttons : [ {
 				text : "保存",
@@ -47,7 +47,7 @@ MyNewsForm = Ext.extend(Ext.Window, {
 			border : false,
 			items : [ {
 				xtype : "fieldset",
-				title : "新闻内容",
+				title : "${tableName}",
 				layout : "form",
 				flex : 2,
 				labelWidth : 60,
@@ -57,29 +57,36 @@ MyNewsForm = Ext.extend(Ext.Window, {
 				defaults : {
 					width : "97%"
 				},
-				items : [ {
-					name : "news.id",
-					xtype : "hidden",
-					value : this.id == null ? "" : this.id,
-					disabled : this.id == null ? true : false
-				}, {
-					fieldLabel : "新闻标题",
-					name : "news.title",
-					allowBlank : false,
-					maxLength : 128
-				}, {
-					fieldLabel : "作者",
-					name : "news.author",
-					allowBlank : false,
-					maxLength : 32
-				}, {
-					fieldLabel : "内容",
-					name : "news.content",
-					allowBlank : false,
-					height : 360,
-					xtype : "fckeditor",
-					maxLength : 65535
-				} ]
+				items : [
+				<#list metas as meta>
+					<#if meta.colName == "id" > 
+					{  	
+						name : "${tableNameLowerCase}.id",
+						xtype : "hidden",
+						value : this.id == null ? "" : this.id,
+						disabled : this.id == null ? true : false
+					},
+					<#elseif meta.colName == "content">
+					{  	
+						fieldLabel : "${meta.colName}",
+						name : "${tableNameLowerCase}.${meta.colName}",
+						allowBlank : false,
+						height : 360,
+						xtype : "fckeditor",
+						maxLength : 65535
+					},
+					<#elseif meta.colName == "date">
+					<#-- 不能更改日期 -->
+					<#else>
+					{  	
+						fieldLabel : "${meta.colName}",
+						name : "${tableNameLowerCase}.${meta.colName}",
+						allowBlank : false,
+						maxLength : 128
+					},
+					</#if>    
+				</#list>
+				]
 			} ]
 		});
 
@@ -87,9 +94,9 @@ MyNewsForm = Ext.extend(Ext.Window, {
 		if (this.id != null && this.id != "undefined") {
 			var b = this.formPanel;
 			b.loadData({
-				url : __ctxPath + "/jf/news/detail?id=" + this.id,
+				url : __ctxPath + "/jf/${tableNameLowerCase}/detail?id=" + this.id,
 				root : "data",
-				preName : "news",
+				preName : "${tableNameLowerCase}",
 				success : function(a, h) {
 					var g = Ext.util.JSON.decode(a.responseText).data;
 				},
@@ -109,9 +116,9 @@ MyNewsForm = Ext.extend(Ext.Window, {
 		$postForm({
 			formPanel : this.formPanel,
 			scope : this,
-			url : __ctxPath + "/jf/news/save",
+			url : __ctxPath + "/jf/${tableNameLowerCase}/save",
 			callback : function(e, f) {
-				var d = Ext.getCmp("MyNewsGrid");
+				var d = Ext.getCmp("My${tableName}Grid");
 				if (d != null) {
 					d.getStore().reload();
 				}

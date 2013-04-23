@@ -50,7 +50,7 @@ My${tableName}View = Ext.extend(Ext.Panel, {
 						}
 						<#list metas as meta>
 						<#if meta.colName != "id"> 
-						,${meta.colName}
+						,"${meta.colName}"
 						</#if>
 						</#list>
 					]
@@ -62,7 +62,7 @@ My${tableName}View = Ext.extend(Ext.Panel, {
 				<#list metas as meta>
 					<#if meta.colName != "content" > 
 				{  	
-				  	text : ${meta.colName},
+				  	text : "${meta.colName}",
 					width : 100,
 					dataIndex : '${meta.colName}',
 					sortable : false
