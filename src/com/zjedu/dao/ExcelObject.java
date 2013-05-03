@@ -1,35 +1,112 @@
 package com.zjedu.dao;
 
-import java.util.Arrays;
-
 public class ExcelObject {
-	public String functonGroup;
-	public String menuGroup;
-	public String menuName;
-	public String viewType;
-	public String[] functions;
-	public String modelName;
-	public String controller;
+	public String functionGroup;
+	public String functionGroupName;
 
-	public ExcelObject(String functonGroup, String menuGroup, String menuName,
-			String viewType, String[] functions, String modelName,
-			String controller) {
-		super();
-		this.functonGroup = functonGroup;
-		this.menuGroup = menuGroup;
-		this.menuName = menuName;
-		this.viewType = viewType;
-		this.functions = functions;
-		this.modelName = modelName;
-		this.controller = controller;
-	}
+	public String menuGroup;
+	public String menuGroupName;
+
+	public String menu;
+	public String menuName;
+
+	public String viewType;
+	public String model;
+	public String controller;
 
 	@Override
 	public String toString() {
-		return "ExcelObject [functonGroup=" + functonGroup + ", menuGroup="
-				+ menuGroup + ", menuName=" + menuName + ", viewType="
-				+ viewType + ", functions=" + Arrays.toString(functions)
-				+ ", modelName=" + modelName + ", controller=" + controller
-				+ "]";
+		return "ExcelObject [functionGroup=" + functionGroup
+				+ ", functionName=" + functionGroupName + ", menuGroup="
+				+ menuGroup + ", menuGroupName=" + menuGroupName + ", menu="
+				+ menu + ", menuName=" + menuName + ", viewType=" + viewType
+				+ ", model=" + model + ", controller=" + controller + "]";
+	}
+
+	public ExcelObject(String functionGroup, String functionName,
+			String menuGroup, String menuGroupName, String menu,
+			String menuName, String viewType, String model, String controller) {
+		super();
+		this.functionGroup = functionGroup;
+		this.functionGroupName = functionName;
+		this.menuGroup = menuGroup;
+		this.menuGroupName = menuGroupName;
+		this.menu = menu;
+		this.menuName = menuName;
+		this.viewType = viewType;
+		this.model = model;
+		this.controller = controller;
+	}
+
+	public String getFunctionGroup() {
+		return functionGroup;
+	}
+
+	public void setFunctionGroup(String functionGroup) {
+		this.functionGroup = functionGroup;
+	}
+
+	public String getFunctionName() {
+		return functionGroupName;
+	}
+
+	public void setFunctionName(String functionName) {
+		this.functionGroupName = functionName;
+	}
+
+	public String getMenuGroup() {
+		return menuGroup;
+	}
+
+	public void setMenuGroup(String menuGroup) {
+		this.menuGroup = menuGroup;
+	}
+
+	public String getMenuGroupName() {
+		return menuGroupName;
+	}
+
+	public void setMenuGroupName(String menuGroupName) {
+		this.menuGroupName = menuGroupName;
+	}
+
+	public String getMenu() {
+		return menu;
+	}
+
+	public void setMenu(String menu) {
+		this.menu = menu;
+	}
+
+	public String getMenuName() {
+		return menuName;
+	}
+
+	public void setMenuName(String menuName) {
+		this.menuName = menuName;
+	}
+
+	public String getViewType() {
+		return viewType;
+	}
+
+	public void setViewType(String viewType) {
+		this.viewType = viewType;
+	}
+
+	public String getModel() {
+		return model;
+	}
+
+	public void setModel(String model) {
+		this.model = model;
+	}
+
+	public String getController() {
+		return controller;
+	}
+
+	public void setController(String controller) {
+		this.controller = controller;
 	}
 }

@@ -10,7 +10,10 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFDateUtil;
@@ -24,6 +27,11 @@ import com.zjedu.dao.ExcelObject;
 
 public class ExcelReader {
 
+	/**
+	 * excel中的列数
+	 */
+	private final static int N = 10;
+
 	public static void main(String[] args) throws Exception {
 		File file = new File("ExcelDemo.xls");
 		String[][] result = getData(file, 2);
@@ -31,6 +39,17 @@ public class ExcelReader {
 		for (ExcelObject excelObject : excelObjects) {
 			System.out.println(excelObject);
 		}
+		// Map<String, Map<String, List<ExcelObject>>> ans =
+		// geneExcelObjectMap(result);
+		// for (Entry<String, Map<String, List<ExcelObject>>> out :
+		// ans.entrySet()) {
+		// System.out.println(out.getKey() + "==>");
+		// for (Entry<String, List<ExcelObject>> in : out.getValue()
+		// .entrySet()) {
+		// System.out.println(in.getKey());
+		// }
+		// System.out.println("=====\n");
+		// }
 	}
 
 	/**
@@ -41,19 +60,53 @@ public class ExcelReader {
 	 */
 	public static List<ExcelObject> geneExcelObject(String[][] result) {
 		List<ExcelObject> excelObjects = new ArrayList<ExcelObject>();
-		String[] container = new String[8];
+		String[] container = new String[N];
 		for (String[] strings : result) {
 			for (int i = 0; i < strings.length; i++) {
-				if (!StringUtils.isEmptyOrWhitespaceOnly(strings[i])) {
+				if (!StringUtils.isEmptyOrWhitespaceOnly(strings[i]) && i < N) {
 					container[i] = strings[i];
 				}
 			}
 			ExcelObject curr = new ExcelObject(container[1], container[2],
-					container[3], container[4], container[5].split("、"),
-					container[6], container[7]);
+					container[3], container[4], container[5], container[6],
+					container[7], container[8], container[9]);
 			excelObjects.add(curr);
 		}
 		return excelObjects;
+	}
+
+	/**
+	 * 根据从excel读取的内容构建一个二级目录结构的map
+	 */
+	public static Map<String, Map<String, List<ExcelObject>>> geneExcelObjectMap(
+			String[][] result) {
+		Map<String, Map<String, List<ExcelObject>>> ans = new LinkedHashMap<String, Map<String, List<ExcelObject>>>();
+		Map<String, List<ExcelObject>> currMap = null;
+		List<ExcelObject> currList = null;
+		String[] container = new String[N];
+		for (String[] strings : result) {
+			// 功能组
+			if (!StringUtils.isEmptyOrWhitespaceOnly(strings[2])) {
+				currMap = new LinkedHashMap<String, List<ExcelObject>>();
+				ans.put(strings[2], currMap);
+			}
+
+			// 菜单分组
+			if (!StringUtils.isEmptyOrWhitespaceOnly(strings[4])) {
+				currList = new ArrayList<ExcelObject>();
+				currMap.put(strings[4], currList);
+			}
+			for (int i = 0; i < strings.length; i++) {
+				if (!StringUtils.isEmptyOrWhitespaceOnly(strings[i]) && i < N) {
+					container[i] = strings[i];
+				}
+			}
+			ExcelObject curr = new ExcelObject(container[1], container[2],
+					container[3], container[4], container[5], container[6],
+					container[7], container[8], container[9]);
+			currList.add(curr);
+		}
+		return ans;
 	}
 
 	/**

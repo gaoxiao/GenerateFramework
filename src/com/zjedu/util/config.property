@@ -21,3 +21,4 @@ ModelFtl = Model.ftl
 ViewFtl = View_js.ftl
 FormFtl = Form_js.ftl
 ConfFtl = Conf.ftl
+MenuFtl = Menu.ftl

@@ -8,4 +8,9 @@ arp.addMapping("${tableNameLowerCase}", ${tableName}.class);
 			__ctxPath + "/js/zjedu/${tableNameLowerCase}/${tableName}Form.js" ],
 
 #添加以下到/js/menu/下对应的xml配置中
-<Item id="${tableName}View" text="${tableName}" iconCls="menu-customer"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<Menus id="Mod_news" text="${excelObject.functonGroup}" iconCls="mod-news">
+	<Items id="MyDesktop" text="${excelObject.menuGroup}" iconCls="menu-desktop" isPublic="true"> 
+		<Item id="${tableName}View" text="${excelObject.menuName}" iconCls="menu-subDiary"/>  
+	</Items>
+</Menus>
