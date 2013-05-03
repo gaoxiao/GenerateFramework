@@ -1,6 +1,7 @@
 package com.zjedu;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.Writer;
@@ -12,6 +13,8 @@ import java.util.Locale;
 import java.util.Map;
 
 import com.zjedu.dao.DBMeta;
+import com.zjedu.dao.ExcelObject;
+import com.zjedu.util.ExcelReader;
 import com.zjedu.util.PropertyUtil;
 import com.zjedu.util.SqlUtil;
 
@@ -31,17 +34,55 @@ public class Genetrator {
 	private final static String FormFtl = PropertyUtil.getProperty("FormFtl");
 	private final static String ConfFtl = PropertyUtil.getProperty("ConfFtl");
 
+	private static boolean inited = false;
+
 	public static void main(String[] args) {
-		String tableName;
-		if (args.length == 0) {
-			tableName = Defalut_TABLENAME;
-		} else {
-			tableName = args[0];
+		// String tableName;
+		// if (args.length == 0) {
+		// tableName = Defalut_TABLENAME;
+		// } else {
+		// tableName = args[0];
+		// }
+		// tableName = normalize(tableName);
+		// init();
+		// geneAll(tableName);
+		geneAllFromExcel("test.xls");
+	}
+
+	public static void geneAllFromExcel(String fileName) {
+		File file = new File(fileName);
+		String[][] result = null;
+		try {
+			result = ExcelReader.getData(file, 2);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
-		tableName = normalize(tableName);
+		List<ExcelObject> excelObjects = ExcelReader.geneExcelObject(result);
+		for (ExcelObject excelObject : excelObjects) {
+			geneFromObject(excelObject);
+		}
+		// for (ExcelObject excelObject : excelObjects) {
+		// System.out.println(excelObject);
+		// }
+	}
 
+	private static void geneFromObject(ExcelObject excelObject) {
 		init();
+		System.out.println("=====================================");
+		System.out.println(excelObject);
+		System.out.println("=====================================");
+		geneModel(excelObject.modelName);
+		geneController(excelObject.modelName);
+		geneView(excelObject.modelName);
+		geneForm(excelObject.modelName);
+		geneConf(excelObject.modelName);
+		System.out.println("end:" + "=========================\n\n");
+	}
 
+	private static void geneAll(String tableName) {
+		init();
 		geneModel(tableName);
 		geneController(tableName);
 		geneView(tableName);
@@ -132,19 +173,22 @@ public class Genetrator {
 	}
 
 	public static void init() {
-		System.out.println("初始化freemarker...");
-		URL url = Genetrator.class.getResource("/ftl");
+		if (inited == false) {
+			System.out.println("初始化freemarker...");
+			URL url = Genetrator.class.getResource("/ftl");
 
-		cfg = new Configuration();
-		try {
-			cfg.setDirectoryForTemplateLoading(new File(url.toURI()));
-			cfg.setObjectWrapper(new DefaultObjectWrapper());
-			cfg.setEncoding(Locale.getDefault(), "utf-8");
-			System.out.println("初始化完成");
-		} catch (IOException e) {
-			e.printStackTrace();
-		} catch (URISyntaxException e) {
-			e.printStackTrace();
+			cfg = new Configuration();
+			try {
+				cfg.setDirectoryForTemplateLoading(new File(url.toURI()));
+				cfg.setObjectWrapper(new DefaultObjectWrapper());
+				cfg.setEncoding(Locale.getDefault(), "utf-8");
+				System.out.println("初始化完成");
+			} catch (IOException e) {
+				e.printStackTrace();
+			} catch (URISyntaxException e) {
+				e.printStackTrace();
+			}
+			inited = true;
 		}
 	}
 }

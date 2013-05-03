@@ -9,6 +9,7 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Vector;
 
+import com.mysql.jdbc.exceptions.MySQLSyntaxErrorException;
 import com.zjedu.dao.DBMeta;
 
 public class SqlUtil {
@@ -60,7 +61,7 @@ public class SqlUtil {
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {
-			e.printStackTrace();
+			System.err.println("数据库连接错误或表（视图）" + tableName + "不存在，请检查数据库");
 		}
 		return metas;
 	}

@@ -19,5 +19,5 @@ confFolder = temp/conf/
 ControllerFtl = Controller.ftl
 ModelFtl = Model.ftl
 ViewFtl = View_js.ftl
-FormFtl = Form_jsl.ftl
+FormFtl = Form_js.ftl
 ConfFtl = Conf.ftl
