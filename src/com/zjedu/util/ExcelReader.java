@@ -35,10 +35,11 @@ public class ExcelReader {
 	public static void main(String[] args) throws Exception {
 		File file = new File("ExcelDemo.xls");
 		String[][] result = getData(file, 2);
-		List<ExcelObject> excelObjects = geneExcelObject(result);
-		for (ExcelObject excelObject : excelObjects) {
-			System.out.println(excelObject);
-		}
+
+		// List<ExcelObject> excelObjects = geneExcelObject(result);
+		// for (ExcelObject excelObject : excelObjects) {
+		// System.out.println(excelObject);
+		// }
 		// Map<String, Map<String, List<ExcelObject>>> ans =
 		// geneExcelObjectMap(result);
 		// for (Entry<String, Map<String, List<ExcelObject>>> out :
@@ -50,6 +51,15 @@ public class ExcelReader {
 		// }
 		// System.out.println("=====\n");
 		// }
+
+		Map<String, List<ExcelObject>> ans = geneControllerMap(result);
+		for (Entry<String, List<ExcelObject>> entry : ans.entrySet()) {
+			System.out.println(entry.getKey() + ":");
+			for (ExcelObject obj : entry.getValue()) {
+				System.out.println(obj);
+			}
+			System.out.println("=====\n");
+		}
 	}
 
 	/**
@@ -76,7 +86,35 @@ public class ExcelReader {
 	}
 
 	/**
-	 * 根据从excel读取的内容构建一个二级目录结构的map
+	 * 根据从excel读取的内容构建一个controller到页面的map
+	 */
+	public static Map<String, List<ExcelObject>> geneControllerMap(
+			String[][] result) {
+		Map<String, List<ExcelObject>> ans = new LinkedHashMap<String, List<ExcelObject>>();
+		List<ExcelObject> currList = null;
+		String[] container = new String[N];
+
+		for (String[] strings : result) {
+			// controller
+			if (!StringUtils.isEmptyOrWhitespaceOnly(strings[9])) {
+				currList = new ArrayList<ExcelObject>();
+				ans.put(strings[9], currList);
+			}
+			for (int i = 0; i < strings.length; i++) {
+				if (!StringUtils.isEmptyOrWhitespaceOnly(strings[i]) && i < N) {
+					container[i] = strings[i];
+				}
+			}
+			ExcelObject curr = new ExcelObject(container[1], container[2],
+					container[3], container[4], container[5], container[6],
+					container[7], container[8], container[9]);
+			currList.add(curr);
+		}
+		return ans;
+	}
+
+	/**
+	 * 根据从excel读取的内容构建一个二级menu目录结构的map
 	 */
 	public static Map<String, Map<String, List<ExcelObject>>> geneExcelObjectMap(
 			String[][] result) {

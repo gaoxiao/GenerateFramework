@@ -31,11 +31,15 @@ public class Genetrator {
 	private final static String Defalut_TABLENAME = "news";
 	private final static String ControllerFtl = PropertyUtil
 			.getProperty("ControllerFtl");
+	private final static String JFConfigFtl = PropertyUtil
+			.getProperty("JFConfigFtl");
 	private final static String ModelFtl = PropertyUtil.getProperty("ModelFtl");
 	private final static String ViewFtl = PropertyUtil.getProperty("ViewFtl");
 	private final static String FormFtl = PropertyUtil.getProperty("FormFtl");
 	private final static String ConfFtl = PropertyUtil.getProperty("ConfFtl");
 	private final static String MenuFtl = PropertyUtil.getProperty("MenuFtl");
+	private final static String ZjeduImportFtl = PropertyUtil
+			.getProperty("ZjeduImportFtl");
 
 	private static boolean inited = false;
 
@@ -63,21 +67,73 @@ public class Genetrator {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+
+		// 生成cnof
+		geneAllConf(result);
+
+		// 生成controller
+		geneAllController(result);
+
+		// TODO 生成js文件
 		// List<ExcelObject> excelObjects = ExcelReader.geneExcelObject(result);
 		// for (ExcelObject excelObject : excelObjects) {
 		// geneFromObject(excelObject);
 		// }
+	}
+
+	private static void geneAllController(String[][] result) {
+		Map<String, List<ExcelObject>> controllerMap = ExcelReader
+				.geneControllerMap(result);
+		for (Entry<String, List<ExcelObject>> entry : controllerMap.entrySet()) {
+			String controller = entry.getKey();
+			List<ExcelObject> objects = entry.getValue();
+			String packageName = objects.get(0).menuGroupName;
+
+			Map<String, Object> vo = new HashMap<String, Object>();
+			vo.put("controller", controller);
+			vo.put("packageName", packageName);
+			vo.put("objects", objects);
+			vo.put("javaPackageName",
+					PropertyUtil.getProperty("javaPackageName"));
+			String filePath = PropertyUtil.getProperty("javaFloder")
+					+ "controller/" + controller + "Controller.java";
+			gene(vo, ControllerFtl, filePath);
+
+			// 对每一个object，生成单独的dao
+			for (ExcelObject excelObject : objects) {
+				geneModel(excelObject);
+			}
+		}
+		// 生成JFConfig.java
+		Map<String, Object> vo = new HashMap<String, Object>();
+		vo.put("controllerMap", controllerMap);
+		vo.put("javaPackageName", PropertyUtil.getProperty("javaPackageName"));
+		String filePath = PropertyUtil.getProperty("javaFloder")
+				+ "JFConfig.java";
+		gene(vo, JFConfigFtl, filePath);
+	}
+
+	private static void geneAllConf(String[][] result) {
+		// 生成配置文件
 		Map<String, Map<String, List<ExcelObject>>> map = ExcelReader
 				.geneExcelObjectMap(result);
-
-		// 生成配置文件
 		for (Entry<String, Map<String, List<ExcelObject>>> out : map.entrySet()) {
 			geneMenuConf(out.getKey(), out.getValue());
+			// TODO 针对不同文件生成配置
+
 			// for (Entry<String, List<ExcelObject>> in : out.getValue()
 			// .entrySet()) {
 			//
 			// }
 		}
+
+		// 生成import文件
+		List<ExcelObject> objets = ExcelReader.geneExcelObject(result);
+		Map<String, Object> vo = new HashMap<String, Object>();
+		vo.put("objects", objets);
+		String filePath = PropertyUtil.getProperty("jsFloder")
+				+ "Zjedu.import.js";
+		gene(vo, ZjeduImportFtl, filePath);
 	}
 
 	private static void geneMenuConf(String funcGroupName,
@@ -171,12 +227,9 @@ public class Genetrator {
 		Map<String, Object> vo = new HashMap<String, Object>();
 		String tableName = normalize(excelObject.model);
 		vo.put("tableName", tableName);
-		vo.put("tableNameLowerCase", tableName.toLowerCase());
-		vo.put("excelObject", excelObject);
-		// 在配置文件中配置包名
 		vo.put("javaPackageName", PropertyUtil.getProperty("javaPackageName"));
-		String filePath = PropertyUtil.getProperty("javaFloder")
-				+ tableName.toLowerCase() + "/" + tableName + ".java";
+		String filePath = PropertyUtil.getProperty("javaFloder") + "dao" + "/"
+				+ tableName + ".java";
 		gene(vo, ModelFtl, filePath);
 	}
 

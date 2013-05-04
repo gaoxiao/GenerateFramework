@@ -3677,3 +3677,842 @@ freemarker.template.TemplateException: Expected extended hash. menuGroupMap eval
 	at com.zjedu.Genetrator.geneMenuConf(Genetrator.java:97)
 	at com.zjedu.Genetrator.geneAllFromExcel(Genetrator.java:75)
 	at com.zjedu.Genetrator.main(Genetrator.java:52)
+
+2013-05-04 15:03:16
+[ERROR]-[Thread: main]-[freemarker.log.Log4JLoggerFactory$Log4JLogger.error()]: Template processing error: "Expression tableNameLowerCase is undefined on line 1, column 45 in Controller.ftl."
+
+Expression tableNameLowerCase is undefined on line 1, column 45 in Controller.ftl.
+The problematic instruction:
+----------
+==> ${tableNameLowerCase} [on line 1, column 43 in Controller.ftl]
+----------
+
+Java backtrace for programmers:
+----------
+freemarker.core.InvalidReferenceException: Expression tableNameLowerCase is undefined on line 1, column 45 in Controller.ftl.
+	at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:125)
+	at freemarker.core.Expression.getStringValue(Expression.java:118)
+	at freemarker.core.Expression.getStringValue(Expression.java:93)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.Environment.process(Environment.java:199)
+	at freemarker.template.Template.process(Template.java:259)
+	at com.zjedu.Genetrator.gene(Genetrator.java:235)
+	at com.zjedu.Genetrator.geneAllController(Genetrator.java:97)
+	at com.zjedu.Genetrator.geneAllFromExcel(Genetrator.java:71)
+	at com.zjedu.Genetrator.main(Genetrator.java:52)
+
+2013-05-04 15:03:17
+[ERROR]-[Thread: main]-[freemarker.log.Log4JLoggerFactory$Log4JLogger.error()]: Template processing error: "Expression tableNameLowerCase is undefined on line 1, column 45 in Controller.ftl."
+
+Expression tableNameLowerCase is undefined on line 1, column 45 in Controller.ftl.
+The problematic instruction:
+----------
+==> ${tableNameLowerCase} [on line 1, column 43 in Controller.ftl]
+----------
+
+Java backtrace for programmers:
+----------
+freemarker.core.InvalidReferenceException: Expression tableNameLowerCase is undefined on line 1, column 45 in Controller.ftl.
+	at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:125)
+	at freemarker.core.Expression.getStringValue(Expression.java:118)
+	at freemarker.core.Expression.getStringValue(Expression.java:93)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.Environment.process(Environment.java:199)
+	at freemarker.template.Template.process(Template.java:259)
+	at com.zjedu.Genetrator.gene(Genetrator.java:235)
+	at com.zjedu.Genetrator.geneAllController(Genetrator.java:97)
+	at com.zjedu.Genetrator.geneAllFromExcel(Genetrator.java:71)
+	at com.zjedu.Genetrator.main(Genetrator.java:52)
+
+2013-05-04 15:03:17
+[ERROR]-[Thread: main]-[freemarker.log.Log4JLoggerFactory$Log4JLogger.error()]: Template processing error: "Expression tableNameLowerCase is undefined on line 1, column 45 in Controller.ftl."
+
+Expression tableNameLowerCase is undefined on line 1, column 45 in Controller.ftl.
+The problematic instruction:
+----------
+==> ${tableNameLowerCase} [on line 1, column 43 in Controller.ftl]
+----------
+
+Java backtrace for programmers:
+----------
+freemarker.core.InvalidReferenceException: Expression tableNameLowerCase is undefined on line 1, column 45 in Controller.ftl.
+	at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:125)
+	at freemarker.core.Expression.getStringValue(Expression.java:118)
+	at freemarker.core.Expression.getStringValue(Expression.java:93)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.Environment.process(Environment.java:199)
+	at freemarker.template.Template.process(Template.java:259)
+	at com.zjedu.Genetrator.gene(Genetrator.java:235)
+	at com.zjedu.Genetrator.geneAllController(Genetrator.java:97)
+	at com.zjedu.Genetrator.geneAllFromExcel(Genetrator.java:71)
+	at com.zjedu.Genetrator.main(Genetrator.java:52)
+
+2013-05-04 15:03:17
+[ERROR]-[Thread: main]-[freemarker.log.Log4JLoggerFactory$Log4JLogger.error()]: Template processing error: "Expression tableNameLowerCase is undefined on line 1, column 45 in Controller.ftl."
+
+Expression tableNameLowerCase is undefined on line 1, column 45 in Controller.ftl.
+The problematic instruction:
+----------
+==> ${tableNameLowerCase} [on line 1, column 43 in Controller.ftl]
+----------
+
+Java backtrace for programmers:
+----------
+freemarker.core.InvalidReferenceException: Expression tableNameLowerCase is undefined on line 1, column 45 in Controller.ftl.
+	at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:125)
+	at freemarker.core.Expression.getStringValue(Expression.java:118)
+	at freemarker.core.Expression.getStringValue(Expression.java:93)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.Environment.process(Environment.java:199)
+	at freemarker.template.Template.process(Template.java:259)
+	at com.zjedu.Genetrator.gene(Genetrator.java:235)
+	at com.zjedu.Genetrator.geneAllController(Genetrator.java:97)
+	at com.zjedu.Genetrator.geneAllFromExcel(Genetrator.java:71)
+	at com.zjedu.Genetrator.main(Genetrator.java:52)
+
+2013-05-04 15:03:17
+[ERROR]-[Thread: main]-[freemarker.log.Log4JLoggerFactory$Log4JLogger.error()]: Template processing error: "Expression tableNameLowerCase is undefined on line 1, column 45 in Controller.ftl."
+
+Expression tableNameLowerCase is undefined on line 1, column 45 in Controller.ftl.
+The problematic instruction:
+----------
+==> ${tableNameLowerCase} [on line 1, column 43 in Controller.ftl]
+----------
+
+Java backtrace for programmers:
+----------
+freemarker.core.InvalidReferenceException: Expression tableNameLowerCase is undefined on line 1, column 45 in Controller.ftl.
+	at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:125)
+	at freemarker.core.Expression.getStringValue(Expression.java:118)
+	at freemarker.core.Expression.getStringValue(Expression.java:93)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.Environment.process(Environment.java:199)
+	at freemarker.template.Template.process(Template.java:259)
+	at com.zjedu.Genetrator.gene(Genetrator.java:235)
+	at com.zjedu.Genetrator.geneAllController(Genetrator.java:97)
+	at com.zjedu.Genetrator.geneAllFromExcel(Genetrator.java:71)
+	at com.zjedu.Genetrator.main(Genetrator.java:52)
+
+2013-05-04 15:03:17
+[ERROR]-[Thread: main]-[freemarker.log.Log4JLoggerFactory$Log4JLogger.error()]: Template processing error: "Expression tableNameLowerCase is undefined on line 1, column 45 in Controller.ftl."
+
+Expression tableNameLowerCase is undefined on line 1, column 45 in Controller.ftl.
+The problematic instruction:
+----------
+==> ${tableNameLowerCase} [on line 1, column 43 in Controller.ftl]
+----------
+
+Java backtrace for programmers:
+----------
+freemarker.core.InvalidReferenceException: Expression tableNameLowerCase is undefined on line 1, column 45 in Controller.ftl.
+	at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:125)
+	at freemarker.core.Expression.getStringValue(Expression.java:118)
+	at freemarker.core.Expression.getStringValue(Expression.java:93)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.Environment.process(Environment.java:199)
+	at freemarker.template.Template.process(Template.java:259)
+	at com.zjedu.Genetrator.gene(Genetrator.java:235)
+	at com.zjedu.Genetrator.geneAllController(Genetrator.java:97)
+	at com.zjedu.Genetrator.geneAllFromExcel(Genetrator.java:71)
+	at com.zjedu.Genetrator.main(Genetrator.java:52)
+
+2013-05-04 15:03:17
+[ERROR]-[Thread: main]-[freemarker.log.Log4JLoggerFactory$Log4JLogger.error()]: Template processing error: "Expression tableNameLowerCase is undefined on line 1, column 45 in Controller.ftl."
+
+Expression tableNameLowerCase is undefined on line 1, column 45 in Controller.ftl.
+The problematic instruction:
+----------
+==> ${tableNameLowerCase} [on line 1, column 43 in Controller.ftl]
+----------
+
+Java backtrace for programmers:
+----------
+freemarker.core.InvalidReferenceException: Expression tableNameLowerCase is undefined on line 1, column 45 in Controller.ftl.
+	at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:125)
+	at freemarker.core.Expression.getStringValue(Expression.java:118)
+	at freemarker.core.Expression.getStringValue(Expression.java:93)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.Environment.process(Environment.java:199)
+	at freemarker.template.Template.process(Template.java:259)
+	at com.zjedu.Genetrator.gene(Genetrator.java:235)
+	at com.zjedu.Genetrator.geneAllController(Genetrator.java:97)
+	at com.zjedu.Genetrator.geneAllFromExcel(Genetrator.java:71)
+	at com.zjedu.Genetrator.main(Genetrator.java:52)
+
+2013-05-04 15:03:17
+[ERROR]-[Thread: main]-[freemarker.log.Log4JLoggerFactory$Log4JLogger.error()]: Template processing error: "Expression tableNameLowerCase is undefined on line 1, column 45 in Controller.ftl."
+
+Expression tableNameLowerCase is undefined on line 1, column 45 in Controller.ftl.
+The problematic instruction:
+----------
+==> ${tableNameLowerCase} [on line 1, column 43 in Controller.ftl]
+----------
+
+Java backtrace for programmers:
+----------
+freemarker.core.InvalidReferenceException: Expression tableNameLowerCase is undefined on line 1, column 45 in Controller.ftl.
+	at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:125)
+	at freemarker.core.Expression.getStringValue(Expression.java:118)
+	at freemarker.core.Expression.getStringValue(Expression.java:93)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.Environment.process(Environment.java:199)
+	at freemarker.template.Template.process(Template.java:259)
+	at com.zjedu.Genetrator.gene(Genetrator.java:235)
+	at com.zjedu.Genetrator.geneAllController(Genetrator.java:97)
+	at com.zjedu.Genetrator.geneAllFromExcel(Genetrator.java:71)
+	at com.zjedu.Genetrator.main(Genetrator.java:52)
+
+2013-05-04 15:03:17
+[ERROR]-[Thread: main]-[freemarker.log.Log4JLoggerFactory$Log4JLogger.error()]: Template processing error: "Expression tableNameLowerCase is undefined on line 1, column 45 in Controller.ftl."
+
+Expression tableNameLowerCase is undefined on line 1, column 45 in Controller.ftl.
+The problematic instruction:
+----------
+==> ${tableNameLowerCase} [on line 1, column 43 in Controller.ftl]
+----------
+
+Java backtrace for programmers:
+----------
+freemarker.core.InvalidReferenceException: Expression tableNameLowerCase is undefined on line 1, column 45 in Controller.ftl.
+	at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:125)
+	at freemarker.core.Expression.getStringValue(Expression.java:118)
+	at freemarker.core.Expression.getStringValue(Expression.java:93)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.Environment.process(Environment.java:199)
+	at freemarker.template.Template.process(Template.java:259)
+	at com.zjedu.Genetrator.gene(Genetrator.java:235)
+	at com.zjedu.Genetrator.geneAllController(Genetrator.java:97)
+	at com.zjedu.Genetrator.geneAllFromExcel(Genetrator.java:71)
+	at com.zjedu.Genetrator.main(Genetrator.java:52)
+
+2013-05-04 15:03:38
+[ERROR]-[Thread: main]-[freemarker.log.Log4JLoggerFactory$Log4JLogger.error()]: Template processing error: "Expression tableName is undefined on line 11, column 16 in Controller.ftl."
+
+Expression tableName is undefined on line 11, column 16 in Controller.ftl.
+The problematic instruction:
+----------
+==> ${tableName} [on line 11, column 14 in Controller.ftl]
+----------
+
+Java backtrace for programmers:
+----------
+freemarker.core.InvalidReferenceException: Expression tableName is undefined on line 11, column 16 in Controller.ftl.
+	at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:125)
+	at freemarker.core.Expression.getStringValue(Expression.java:118)
+	at freemarker.core.Expression.getStringValue(Expression.java:93)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.Environment.process(Environment.java:199)
+	at freemarker.template.Template.process(Template.java:259)
+	at com.zjedu.Genetrator.gene(Genetrator.java:235)
+	at com.zjedu.Genetrator.geneAllController(Genetrator.java:97)
+	at com.zjedu.Genetrator.geneAllFromExcel(Genetrator.java:71)
+	at com.zjedu.Genetrator.main(Genetrator.java:52)
+
+2013-05-04 15:03:38
+[ERROR]-[Thread: main]-[freemarker.log.Log4JLoggerFactory$Log4JLogger.error()]: Template processing error: "Expression tableName is undefined on line 11, column 16 in Controller.ftl."
+
+Expression tableName is undefined on line 11, column 16 in Controller.ftl.
+The problematic instruction:
+----------
+==> ${tableName} [on line 11, column 14 in Controller.ftl]
+----------
+
+Java backtrace for programmers:
+----------
+freemarker.core.InvalidReferenceException: Expression tableName is undefined on line 11, column 16 in Controller.ftl.
+	at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:125)
+	at freemarker.core.Expression.getStringValue(Expression.java:118)
+	at freemarker.core.Expression.getStringValue(Expression.java:93)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.Environment.process(Environment.java:199)
+	at freemarker.template.Template.process(Template.java:259)
+	at com.zjedu.Genetrator.gene(Genetrator.java:235)
+	at com.zjedu.Genetrator.geneAllController(Genetrator.java:97)
+	at com.zjedu.Genetrator.geneAllFromExcel(Genetrator.java:71)
+	at com.zjedu.Genetrator.main(Genetrator.java:52)
+
+2013-05-04 15:03:38
+[ERROR]-[Thread: main]-[freemarker.log.Log4JLoggerFactory$Log4JLogger.error()]: Template processing error: "Expression tableName is undefined on line 11, column 16 in Controller.ftl."
+
+Expression tableName is undefined on line 11, column 16 in Controller.ftl.
+The problematic instruction:
+----------
+==> ${tableName} [on line 11, column 14 in Controller.ftl]
+----------
+
+Java backtrace for programmers:
+----------
+freemarker.core.InvalidReferenceException: Expression tableName is undefined on line 11, column 16 in Controller.ftl.
+	at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:125)
+	at freemarker.core.Expression.getStringValue(Expression.java:118)
+	at freemarker.core.Expression.getStringValue(Expression.java:93)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.Environment.process(Environment.java:199)
+	at freemarker.template.Template.process(Template.java:259)
+	at com.zjedu.Genetrator.gene(Genetrator.java:235)
+	at com.zjedu.Genetrator.geneAllController(Genetrator.java:97)
+	at com.zjedu.Genetrator.geneAllFromExcel(Genetrator.java:71)
+	at com.zjedu.Genetrator.main(Genetrator.java:52)
+
+2013-05-04 15:03:38
+[ERROR]-[Thread: main]-[freemarker.log.Log4JLoggerFactory$Log4JLogger.error()]: Template processing error: "Expression tableName is undefined on line 11, column 16 in Controller.ftl."
+
+Expression tableName is undefined on line 11, column 16 in Controller.ftl.
+The problematic instruction:
+----------
+==> ${tableName} [on line 11, column 14 in Controller.ftl]
+----------
+
+Java backtrace for programmers:
+----------
+freemarker.core.InvalidReferenceException: Expression tableName is undefined on line 11, column 16 in Controller.ftl.
+	at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:125)
+	at freemarker.core.Expression.getStringValue(Expression.java:118)
+	at freemarker.core.Expression.getStringValue(Expression.java:93)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.Environment.process(Environment.java:199)
+	at freemarker.template.Template.process(Template.java:259)
+	at com.zjedu.Genetrator.gene(Genetrator.java:235)
+	at com.zjedu.Genetrator.geneAllController(Genetrator.java:97)
+	at com.zjedu.Genetrator.geneAllFromExcel(Genetrator.java:71)
+	at com.zjedu.Genetrator.main(Genetrator.java:52)
+
+2013-05-04 15:03:38
+[ERROR]-[Thread: main]-[freemarker.log.Log4JLoggerFactory$Log4JLogger.error()]: Template processing error: "Expression tableName is undefined on line 11, column 16 in Controller.ftl."
+
+Expression tableName is undefined on line 11, column 16 in Controller.ftl.
+The problematic instruction:
+----------
+==> ${tableName} [on line 11, column 14 in Controller.ftl]
+----------
+
+Java backtrace for programmers:
+----------
+freemarker.core.InvalidReferenceException: Expression tableName is undefined on line 11, column 16 in Controller.ftl.
+	at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:125)
+	at freemarker.core.Expression.getStringValue(Expression.java:118)
+	at freemarker.core.Expression.getStringValue(Expression.java:93)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.Environment.process(Environment.java:199)
+	at freemarker.template.Template.process(Template.java:259)
+	at com.zjedu.Genetrator.gene(Genetrator.java:235)
+	at com.zjedu.Genetrator.geneAllController(Genetrator.java:97)
+	at com.zjedu.Genetrator.geneAllFromExcel(Genetrator.java:71)
+	at com.zjedu.Genetrator.main(Genetrator.java:52)
+
+2013-05-04 15:03:38
+[ERROR]-[Thread: main]-[freemarker.log.Log4JLoggerFactory$Log4JLogger.error()]: Template processing error: "Expression tableName is undefined on line 11, column 16 in Controller.ftl."
+
+Expression tableName is undefined on line 11, column 16 in Controller.ftl.
+The problematic instruction:
+----------
+==> ${tableName} [on line 11, column 14 in Controller.ftl]
+----------
+
+Java backtrace for programmers:
+----------
+freemarker.core.InvalidReferenceException: Expression tableName is undefined on line 11, column 16 in Controller.ftl.
+	at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:125)
+	at freemarker.core.Expression.getStringValue(Expression.java:118)
+	at freemarker.core.Expression.getStringValue(Expression.java:93)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.Environment.process(Environment.java:199)
+	at freemarker.template.Template.process(Template.java:259)
+	at com.zjedu.Genetrator.gene(Genetrator.java:235)
+	at com.zjedu.Genetrator.geneAllController(Genetrator.java:97)
+	at com.zjedu.Genetrator.geneAllFromExcel(Genetrator.java:71)
+	at com.zjedu.Genetrator.main(Genetrator.java:52)
+
+2013-05-04 15:03:38
+[ERROR]-[Thread: main]-[freemarker.log.Log4JLoggerFactory$Log4JLogger.error()]: Template processing error: "Expression tableName is undefined on line 11, column 16 in Controller.ftl."
+
+Expression tableName is undefined on line 11, column 16 in Controller.ftl.
+The problematic instruction:
+----------
+==> ${tableName} [on line 11, column 14 in Controller.ftl]
+----------
+
+Java backtrace for programmers:
+----------
+freemarker.core.InvalidReferenceException: Expression tableName is undefined on line 11, column 16 in Controller.ftl.
+	at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:125)
+	at freemarker.core.Expression.getStringValue(Expression.java:118)
+	at freemarker.core.Expression.getStringValue(Expression.java:93)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.Environment.process(Environment.java:199)
+	at freemarker.template.Template.process(Template.java:259)
+	at com.zjedu.Genetrator.gene(Genetrator.java:235)
+	at com.zjedu.Genetrator.geneAllController(Genetrator.java:97)
+	at com.zjedu.Genetrator.geneAllFromExcel(Genetrator.java:71)
+	at com.zjedu.Genetrator.main(Genetrator.java:52)
+
+2013-05-04 15:03:38
+[ERROR]-[Thread: main]-[freemarker.log.Log4JLoggerFactory$Log4JLogger.error()]: Template processing error: "Expression tableName is undefined on line 11, column 16 in Controller.ftl."
+
+Expression tableName is undefined on line 11, column 16 in Controller.ftl.
+The problematic instruction:
+----------
+==> ${tableName} [on line 11, column 14 in Controller.ftl]
+----------
+
+Java backtrace for programmers:
+----------
+freemarker.core.InvalidReferenceException: Expression tableName is undefined on line 11, column 16 in Controller.ftl.
+	at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:125)
+	at freemarker.core.Expression.getStringValue(Expression.java:118)
+	at freemarker.core.Expression.getStringValue(Expression.java:93)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.Environment.process(Environment.java:199)
+	at freemarker.template.Template.process(Template.java:259)
+	at com.zjedu.Genetrator.gene(Genetrator.java:235)
+	at com.zjedu.Genetrator.geneAllController(Genetrator.java:97)
+	at com.zjedu.Genetrator.geneAllFromExcel(Genetrator.java:71)
+	at com.zjedu.Genetrator.main(Genetrator.java:52)
+
+2013-05-04 15:03:38
+[ERROR]-[Thread: main]-[freemarker.log.Log4JLoggerFactory$Log4JLogger.error()]: Template processing error: "Expression tableName is undefined on line 11, column 16 in Controller.ftl."
+
+Expression tableName is undefined on line 11, column 16 in Controller.ftl.
+The problematic instruction:
+----------
+==> ${tableName} [on line 11, column 14 in Controller.ftl]
+----------
+
+Java backtrace for programmers:
+----------
+freemarker.core.InvalidReferenceException: Expression tableName is undefined on line 11, column 16 in Controller.ftl.
+	at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:125)
+	at freemarker.core.Expression.getStringValue(Expression.java:118)
+	at freemarker.core.Expression.getStringValue(Expression.java:93)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.Environment.process(Environment.java:199)
+	at freemarker.template.Template.process(Template.java:259)
+	at com.zjedu.Genetrator.gene(Genetrator.java:235)
+	at com.zjedu.Genetrator.geneAllController(Genetrator.java:97)
+	at com.zjedu.Genetrator.geneAllFromExcel(Genetrator.java:71)
+	at com.zjedu.Genetrator.main(Genetrator.java:52)
+
+2013-05-04 15:03:55
+[ERROR]-[Thread: main]-[freemarker.log.Log4JLoggerFactory$Log4JLogger.error()]: Template processing error: "Expression model is undefined on line 22, column 41 in Controller.ftl."
+
+Expression model is undefined on line 22, column 41 in Controller.ftl.
+The problematic instruction:
+----------
+==> ${model} [on line 22, column 39 in Controller.ftl]
+----------
+
+Java backtrace for programmers:
+----------
+freemarker.core.InvalidReferenceException: Expression model is undefined on line 22, column 41 in Controller.ftl.
+	at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:125)
+	at freemarker.core.Expression.getStringValue(Expression.java:118)
+	at freemarker.core.Expression.getStringValue(Expression.java:93)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.IteratorBlock$Context.runLoop(IteratorBlock.java:179)
+	at freemarker.core.Environment.visit(Environment.java:428)
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:102)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.Environment.process(Environment.java:199)
+	at freemarker.template.Template.process(Template.java:259)
+	at com.zjedu.Genetrator.gene(Genetrator.java:235)
+	at com.zjedu.Genetrator.geneAllController(Genetrator.java:97)
+	at com.zjedu.Genetrator.geneAllFromExcel(Genetrator.java:71)
+	at com.zjedu.Genetrator.main(Genetrator.java:52)
+
+2013-05-04 15:03:55
+[ERROR]-[Thread: main]-[freemarker.log.Log4JLoggerFactory$Log4JLogger.error()]: Template processing error: "Expression model is undefined on line 22, column 41 in Controller.ftl."
+
+Expression model is undefined on line 22, column 41 in Controller.ftl.
+The problematic instruction:
+----------
+==> ${model} [on line 22, column 39 in Controller.ftl]
+----------
+
+Java backtrace for programmers:
+----------
+freemarker.core.InvalidReferenceException: Expression model is undefined on line 22, column 41 in Controller.ftl.
+	at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:125)
+	at freemarker.core.Expression.getStringValue(Expression.java:118)
+	at freemarker.core.Expression.getStringValue(Expression.java:93)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.IteratorBlock$Context.runLoop(IteratorBlock.java:179)
+	at freemarker.core.Environment.visit(Environment.java:428)
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:102)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.Environment.process(Environment.java:199)
+	at freemarker.template.Template.process(Template.java:259)
+	at com.zjedu.Genetrator.gene(Genetrator.java:235)
+	at com.zjedu.Genetrator.geneAllController(Genetrator.java:97)
+	at com.zjedu.Genetrator.geneAllFromExcel(Genetrator.java:71)
+	at com.zjedu.Genetrator.main(Genetrator.java:52)
+
+2013-05-04 15:03:55
+[ERROR]-[Thread: main]-[freemarker.log.Log4JLoggerFactory$Log4JLogger.error()]: Template processing error: "Expression model is undefined on line 22, column 41 in Controller.ftl."
+
+Expression model is undefined on line 22, column 41 in Controller.ftl.
+The problematic instruction:
+----------
+==> ${model} [on line 22, column 39 in Controller.ftl]
+----------
+
+Java backtrace for programmers:
+----------
+freemarker.core.InvalidReferenceException: Expression model is undefined on line 22, column 41 in Controller.ftl.
+	at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:125)
+	at freemarker.core.Expression.getStringValue(Expression.java:118)
+	at freemarker.core.Expression.getStringValue(Expression.java:93)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.IteratorBlock$Context.runLoop(IteratorBlock.java:179)
+	at freemarker.core.Environment.visit(Environment.java:428)
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:102)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.Environment.process(Environment.java:199)
+	at freemarker.template.Template.process(Template.java:259)
+	at com.zjedu.Genetrator.gene(Genetrator.java:235)
+	at com.zjedu.Genetrator.geneAllController(Genetrator.java:97)
+	at com.zjedu.Genetrator.geneAllFromExcel(Genetrator.java:71)
+	at com.zjedu.Genetrator.main(Genetrator.java:52)
+
+2013-05-04 15:03:55
+[ERROR]-[Thread: main]-[freemarker.log.Log4JLoggerFactory$Log4JLogger.error()]: Template processing error: "Expression model is undefined on line 22, column 41 in Controller.ftl."
+
+Expression model is undefined on line 22, column 41 in Controller.ftl.
+The problematic instruction:
+----------
+==> ${model} [on line 22, column 39 in Controller.ftl]
+----------
+
+Java backtrace for programmers:
+----------
+freemarker.core.InvalidReferenceException: Expression model is undefined on line 22, column 41 in Controller.ftl.
+	at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:125)
+	at freemarker.core.Expression.getStringValue(Expression.java:118)
+	at freemarker.core.Expression.getStringValue(Expression.java:93)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.IteratorBlock$Context.runLoop(IteratorBlock.java:179)
+	at freemarker.core.Environment.visit(Environment.java:428)
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:102)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.Environment.process(Environment.java:199)
+	at freemarker.template.Template.process(Template.java:259)
+	at com.zjedu.Genetrator.gene(Genetrator.java:235)
+	at com.zjedu.Genetrator.geneAllController(Genetrator.java:97)
+	at com.zjedu.Genetrator.geneAllFromExcel(Genetrator.java:71)
+	at com.zjedu.Genetrator.main(Genetrator.java:52)
+
+2013-05-04 15:03:55
+[ERROR]-[Thread: main]-[freemarker.log.Log4JLoggerFactory$Log4JLogger.error()]: Template processing error: "Expression model is undefined on line 22, column 41 in Controller.ftl."
+
+Expression model is undefined on line 22, column 41 in Controller.ftl.
+The problematic instruction:
+----------
+==> ${model} [on line 22, column 39 in Controller.ftl]
+----------
+
+Java backtrace for programmers:
+----------
+freemarker.core.InvalidReferenceException: Expression model is undefined on line 22, column 41 in Controller.ftl.
+	at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:125)
+	at freemarker.core.Expression.getStringValue(Expression.java:118)
+	at freemarker.core.Expression.getStringValue(Expression.java:93)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.IteratorBlock$Context.runLoop(IteratorBlock.java:179)
+	at freemarker.core.Environment.visit(Environment.java:428)
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:102)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.Environment.process(Environment.java:199)
+	at freemarker.template.Template.process(Template.java:259)
+	at com.zjedu.Genetrator.gene(Genetrator.java:235)
+	at com.zjedu.Genetrator.geneAllController(Genetrator.java:97)
+	at com.zjedu.Genetrator.geneAllFromExcel(Genetrator.java:71)
+	at com.zjedu.Genetrator.main(Genetrator.java:52)
+
+2013-05-04 15:03:55
+[ERROR]-[Thread: main]-[freemarker.log.Log4JLoggerFactory$Log4JLogger.error()]: Template processing error: "Expression model is undefined on line 22, column 41 in Controller.ftl."
+
+Expression model is undefined on line 22, column 41 in Controller.ftl.
+The problematic instruction:
+----------
+==> ${model} [on line 22, column 39 in Controller.ftl]
+----------
+
+Java backtrace for programmers:
+----------
+freemarker.core.InvalidReferenceException: Expression model is undefined on line 22, column 41 in Controller.ftl.
+	at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:125)
+	at freemarker.core.Expression.getStringValue(Expression.java:118)
+	at freemarker.core.Expression.getStringValue(Expression.java:93)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.IteratorBlock$Context.runLoop(IteratorBlock.java:179)
+	at freemarker.core.Environment.visit(Environment.java:428)
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:102)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.Environment.process(Environment.java:199)
+	at freemarker.template.Template.process(Template.java:259)
+	at com.zjedu.Genetrator.gene(Genetrator.java:235)
+	at com.zjedu.Genetrator.geneAllController(Genetrator.java:97)
+	at com.zjedu.Genetrator.geneAllFromExcel(Genetrator.java:71)
+	at com.zjedu.Genetrator.main(Genetrator.java:52)
+
+2013-05-04 15:03:55
+[ERROR]-[Thread: main]-[freemarker.log.Log4JLoggerFactory$Log4JLogger.error()]: Template processing error: "Expression model is undefined on line 22, column 41 in Controller.ftl."
+
+Expression model is undefined on line 22, column 41 in Controller.ftl.
+The problematic instruction:
+----------
+==> ${model} [on line 22, column 39 in Controller.ftl]
+----------
+
+Java backtrace for programmers:
+----------
+freemarker.core.InvalidReferenceException: Expression model is undefined on line 22, column 41 in Controller.ftl.
+	at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:125)
+	at freemarker.core.Expression.getStringValue(Expression.java:118)
+	at freemarker.core.Expression.getStringValue(Expression.java:93)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.IteratorBlock$Context.runLoop(IteratorBlock.java:179)
+	at freemarker.core.Environment.visit(Environment.java:428)
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:102)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.Environment.process(Environment.java:199)
+	at freemarker.template.Template.process(Template.java:259)
+	at com.zjedu.Genetrator.gene(Genetrator.java:235)
+	at com.zjedu.Genetrator.geneAllController(Genetrator.java:97)
+	at com.zjedu.Genetrator.geneAllFromExcel(Genetrator.java:71)
+	at com.zjedu.Genetrator.main(Genetrator.java:52)
+
+2013-05-04 15:03:55
+[ERROR]-[Thread: main]-[freemarker.log.Log4JLoggerFactory$Log4JLogger.error()]: Template processing error: "Expression model is undefined on line 22, column 41 in Controller.ftl."
+
+Expression model is undefined on line 22, column 41 in Controller.ftl.
+The problematic instruction:
+----------
+==> ${model} [on line 22, column 39 in Controller.ftl]
+----------
+
+Java backtrace for programmers:
+----------
+freemarker.core.InvalidReferenceException: Expression model is undefined on line 22, column 41 in Controller.ftl.
+	at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:125)
+	at freemarker.core.Expression.getStringValue(Expression.java:118)
+	at freemarker.core.Expression.getStringValue(Expression.java:93)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.IteratorBlock$Context.runLoop(IteratorBlock.java:179)
+	at freemarker.core.Environment.visit(Environment.java:428)
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:102)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.Environment.process(Environment.java:199)
+	at freemarker.template.Template.process(Template.java:259)
+	at com.zjedu.Genetrator.gene(Genetrator.java:235)
+	at com.zjedu.Genetrator.geneAllController(Genetrator.java:97)
+	at com.zjedu.Genetrator.geneAllFromExcel(Genetrator.java:71)
+	at com.zjedu.Genetrator.main(Genetrator.java:52)
+
+2013-05-04 15:03:55
+[ERROR]-[Thread: main]-[freemarker.log.Log4JLoggerFactory$Log4JLogger.error()]: Template processing error: "Expression model is undefined on line 22, column 41 in Controller.ftl."
+
+Expression model is undefined on line 22, column 41 in Controller.ftl.
+The problematic instruction:
+----------
+==> ${model} [on line 22, column 39 in Controller.ftl]
+----------
+
+Java backtrace for programmers:
+----------
+freemarker.core.InvalidReferenceException: Expression model is undefined on line 22, column 41 in Controller.ftl.
+	at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:125)
+	at freemarker.core.Expression.getStringValue(Expression.java:118)
+	at freemarker.core.Expression.getStringValue(Expression.java:93)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.IteratorBlock$Context.runLoop(IteratorBlock.java:179)
+	at freemarker.core.Environment.visit(Environment.java:428)
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:102)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.Environment.process(Environment.java:199)
+	at freemarker.template.Template.process(Template.java:259)
+	at com.zjedu.Genetrator.gene(Genetrator.java:235)
+	at com.zjedu.Genetrator.geneAllController(Genetrator.java:97)
+	at com.zjedu.Genetrator.geneAllFromExcel(Genetrator.java:71)
+	at com.zjedu.Genetrator.main(Genetrator.java:52)
+
+2013-05-04 15:33:10
+[ERROR]-[Thread: main]-[freemarker.log.Log4JLoggerFactory$Log4JLogger.error()]: Template processing error: "Expected hash. objects evaluated instead to freemarker.template.SimpleSequence on line 22, column 31 in JFConfig.ftl."
+
+Expected hash. objects evaluated instead to freemarker.template.SimpleSequence on line 22, column 31 in JFConfig.ftl.
+The problematic instruction:
+----------
+==> ${objects.menuName} [on line 22, column 29 in JFConfig.ftl]
+----------
+
+Java backtrace for programmers:
+----------
+freemarker.template.TemplateException: Expected hash. objects evaluated instead to freemarker.template.SimpleSequence on line 22, column 31 in JFConfig.ftl.
+	at freemarker.core.TemplateObject.invalidTypeException(TemplateObject.java:136)
+	at freemarker.core.Dot._getAsTemplateModel(Dot.java:78)
+	at freemarker.core.Expression.getAsTemplateModel(Expression.java:89)
+	at freemarker.core.Expression.getStringValue(Expression.java:93)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.IteratorBlock$Context.runLoop(IteratorBlock.java:179)
+	at freemarker.core.Environment.visit(Environment.java:428)
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:102)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.IteratorBlock$Context.runLoop(IteratorBlock.java:167)
+	at freemarker.core.Environment.visit(Environment.java:428)
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:102)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.Environment.process(Environment.java:199)
+	at freemarker.template.Template.process(Template.java:259)
+	at com.zjedu.Genetrator.gene(Genetrator.java:245)
+	at com.zjedu.Genetrator.geneAllController(Genetrator.java:111)
+	at com.zjedu.Genetrator.geneAllFromExcel(Genetrator.java:73)
+	at com.zjedu.Genetrator.main(Genetrator.java:54)
+
+2013-05-04 16:24:50
+[ERROR]-[Thread: main]-[freemarker.log.Log4JLoggerFactory$Log4JLogger.error()]: Template processing error: "Expression objects is undefined on line 1, column 8 in Zjedu.import.ftl."
+
+Expression objects is undefined on line 1, column 8 in Zjedu.import.ftl.
+The problematic instruction:
+----------
+==> list objects as obj [on line 1, column 1 in Zjedu.import.ftl]
+----------
+
+Java backtrace for programmers:
+----------
+freemarker.core.InvalidReferenceException: Expression objects is undefined on line 1, column 8 in Zjedu.import.ftl.
+	at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:125)
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:100)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.Environment.process(Environment.java:199)
+	at freemarker.template.Template.process(Template.java:259)
+	at com.zjedu.Genetrator.gene(Genetrator.java:255)
+	at com.zjedu.Genetrator.geneAllConf(Genetrator.java:136)
+	at com.zjedu.Genetrator.geneAllFromExcel(Genetrator.java:72)
+	at com.zjedu.Genetrator.main(Genetrator.java:56)
+
+2013-05-04 16:25:09
+[ERROR]-[Thread: main]-[freemarker.log.Log4JLoggerFactory$Log4JLogger.error()]: Template processing error: "Expression objects is undefined on line 1, column 8 in Zjedu.import.ftl."
+
+Expression objects is undefined on line 1, column 8 in Zjedu.import.ftl.
+The problematic instruction:
+----------
+==> list objects as obj [on line 1, column 1 in Zjedu.import.ftl]
+----------
+
+Java backtrace for programmers:
+----------
+freemarker.core.InvalidReferenceException: Expression objects is undefined on line 1, column 8 in Zjedu.import.ftl.
+	at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:125)
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:100)
+	at freemarker.core.Environment.visit(Environment.java:221)
+	at freemarker.core.Environment.process(Environment.java:199)
+	at freemarker.template.Template.process(Template.java:259)
+	at com.zjedu.Genetrator.gene(Genetrator.java:255)
+	at com.zjedu.Genetrator.geneAllConf(Genetrator.java:136)
+	at com.zjedu.Genetrator.geneAllFromExcel(Genetrator.java:72)
+	at com.zjedu.Genetrator.main(Genetrator.java:56)

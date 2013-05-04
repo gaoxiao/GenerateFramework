@@ -17,8 +17,10 @@ confFolder = temp/conf/
 
 # 定义模板文件
 ControllerFtl = Controller.ftl
+JFConfigFtl = JFConfig.ftl
 ModelFtl = Model.ftl
 ViewFtl = View_js.ftl
 FormFtl = Form_js.ftl
 ConfFtl = Conf.ftl
 MenuFtl = Menu.ftl
+ZjeduImportFtl = Zjedu.import.ftl
