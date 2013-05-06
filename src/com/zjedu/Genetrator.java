@@ -8,7 +8,6 @@ import java.io.Writer;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
@@ -28,7 +27,6 @@ import freemarker.template.TemplateException;
 public class Genetrator {
 
 	static Configuration cfg = null;
-	private final static String Defalut_TABLENAME = "news";
 	private final static String ControllerFtl = PropertyUtil
 			.getProperty("ControllerFtl");
 	private final static String JFConfigFtl = PropertyUtil
@@ -36,10 +34,11 @@ public class Genetrator {
 	private final static String ModelFtl = PropertyUtil.getProperty("ModelFtl");
 	private final static String ViewFtl = PropertyUtil.getProperty("ViewFtl");
 	private final static String FormFtl = PropertyUtil.getProperty("FormFtl");
-	private final static String ConfFtl = PropertyUtil.getProperty("ConfFtl");
 	private final static String MenuFtl = PropertyUtil.getProperty("MenuFtl");
 	private final static String ZjeduImportFtl = PropertyUtil
 			.getProperty("ZjeduImportFtl");
+	// private final static String ConfFtl =
+	// PropertyUtil.getProperty("ConfFtl");
 
 	private static boolean inited = false;
 
@@ -74,11 +73,18 @@ public class Genetrator {
 		// 生成controller
 		geneAllController(result);
 
-		// TODO 生成js文件
-		// List<ExcelObject> excelObjects = ExcelReader.geneExcelObject(result);
-		// for (ExcelObject excelObject : excelObjects) {
-		// geneFromObject(excelObject);
-		// }
+		// TOO 生成js文件
+		geneAllJS(result);
+
+	}
+
+	private static void geneAllJS(String[][] result) {
+		List<ExcelObject> excelObjects = ExcelReader.geneExcelObject(result);
+		for (ExcelObject excelObject : excelObjects) {
+			// TODO 是否需要根据界面类型选择生
+			geneView(excelObject);
+			geneForm(excelObject);
+		}
 	}
 
 	private static void geneAllController(String[][] result) {
@@ -113,18 +119,18 @@ public class Genetrator {
 		gene(vo, JFConfigFtl, filePath);
 	}
 
+	/**
+	 * 生成： 1.Zjedu.import.js 2.每个功能组的配置文件（eg：menu-normal.xml）
+	 * 
+	 * @param result
+	 */
 	private static void geneAllConf(String[][] result) {
 		// 生成配置文件
 		Map<String, Map<String, List<ExcelObject>>> map = ExcelReader
 				.geneExcelObjectMap(result);
 		for (Entry<String, Map<String, List<ExcelObject>>> out : map.entrySet()) {
 			geneMenuConf(out.getKey(), out.getValue());
-			// TODO 针对不同文件生成配置
-
-			// for (Entry<String, List<ExcelObject>> in : out.getValue()
-			// .entrySet()) {
-			//
-			// }
+			// TODO 针对不同文件，生成menu-all.xml中对应的配置
 		}
 
 		// 生成import文件
@@ -151,77 +157,41 @@ public class Genetrator {
 		gene(vo, MenuFtl, filePath);
 	}
 
-	private static void geneFromObject(ExcelObject excelObject) {
-		init();
-		System.out.println("=====================================");
-		System.out.println(excelObject);
-		System.out.println("=====================================");
-		geneModel(excelObject);
-		geneController(excelObject);
-		geneView(excelObject);
-		geneForm(excelObject);
-		geneConf(excelObject);
-		System.out.println("end:" + "=========================\n\n");
-	}
-
-	private static void geneAll(String tableName) {
-		// init();
-		// geneModel(tableName);
-		// geneController(tableName);
-		// geneView(tableName);
-		// geneForm(tableName);
-		// geneConf(tableName);
-	}
-
-	private static void geneConf(ExcelObject excelObject) {
-		String tableName = normalize(excelObject.model);
-		Map<String, Object> vo = new HashMap<String, Object>();
-		vo.put("tableName", tableName);
-		vo.put("tableNameLowerCase", tableName.toLowerCase());
-		vo.put("excelObject", excelObject);
-		String filePath = PropertyUtil.getProperty("confFolder")
-				+ tableName.toLowerCase() + "/" + tableName + "Config.txt";
-		gene(vo, ConfFtl, filePath);
-
-	}
-
 	private static void geneForm(ExcelObject excelObject) {
-		String tableName = normalize(excelObject.model);
-		List<DBMeta> metas = SqlUtil.getMetadata(tableName);
+		String viewName = normalize(excelObject.menuName);
+		List<DBMeta> metas = SqlUtil.getMetadata(excelObject.model);
 		Map<String, Object> vo = new HashMap<String, Object>();
-		vo.put("tableName", tableName);
-		vo.put("tableNameLowerCase", tableName.toLowerCase());
-		vo.put("excelObject", excelObject);
+		vo.put("viewName", viewName);
+		vo.put("obj", excelObject);
 		vo.put("metas", metas);
 		String filePath = PropertyUtil.getProperty("jsFloder")
-				+ tableName.toLowerCase() + "/" + tableName + "Form.js";
+				+ excelObject.controller + "/" + viewName + "Form.js";
 		gene(vo, FormFtl, filePath);
 	}
 
 	private static void geneView(ExcelObject excelObject) {
-		String tableName = normalize(excelObject.model);
-		List<DBMeta> metas = SqlUtil.getMetadata(tableName);
+		String viewName = normalize(excelObject.menuName);
+		List<DBMeta> metas = SqlUtil.getMetadata(excelObject.model);
 		Map<String, Object> vo = new HashMap<String, Object>();
-		vo.put("tableName", tableName);
-		vo.put("tableNameLowerCase", tableName.toLowerCase());
-		vo.put("excelObject", excelObject);
+		vo.put("viewName", viewName);
+		vo.put("obj", excelObject);
 		vo.put("metas", metas);
 		String filePath = PropertyUtil.getProperty("jsFloder")
-				+ tableName.toLowerCase() + "/" + tableName + "View.js";
+				+ excelObject.controller + "/" + viewName + "View.js";
 		gene(vo, ViewFtl, filePath);
 	}
 
-	private static void geneController(ExcelObject excelObject) {
-		Map<String, Object> vo = new HashMap<String, Object>();
-		String tableName = normalize(excelObject.model);
-		vo.put("tableName", tableName);
-		vo.put("tableNameLowerCase", tableName.toLowerCase());
-		vo.put("excelObject", excelObject);
-		vo.put("javaPackageName", PropertyUtil.getProperty("javaPackageName"));
-		String filePath = PropertyUtil.getProperty("javaFloder")
-				+ tableName.toLowerCase() + "/" + tableName + "Controller.java";
-		gene(vo, ControllerFtl, filePath);
-	}
+	// private static void geneController(ExcelObject excelObject) {
+	// Map<String, Object> vo = new HashMap<String, Object>();
+	// String tableName = normalize(excelObject.model);
+	// vo.put("tableName", tableName);
+	// vo.put("tableNameLowerCase", tableName.toLowerCase());
+	// vo.put("excelObject", excelObject);
+	// vo.put("javaPackageName", PropertyUtil.getProperty("javaPackageName"));
+	// String filePath = PropertyUtil.getProperty("javaFloder")
+	// + tableName.toLowerCase() + "/" + tableName + "Controller.java";
+	// gene(vo, ControllerFtl, filePath);
+	// }
 
 	private static void geneModel(ExcelObject excelObject) {
 		Map<String, Object> vo = new HashMap<String, Object>();
@@ -239,8 +209,9 @@ public class Genetrator {
 		return tablename;
 	}
 
-	public static void gene(Map<String, Object> vo, String templateName,
+	private static void gene(Map<String, Object> vo, String templateName,
 			String fileName) {
+		init();
 		try {
 			Template template = cfg.getTemplate(templateName);
 			File distFile = new File(fileName);

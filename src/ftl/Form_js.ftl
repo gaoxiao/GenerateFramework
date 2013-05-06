@@ -1,18 +1,18 @@
-My${tableName}Form = Ext.extend(Ext.Window, {
+My${viewName}Form = Ext.extend(Ext.Window, {
 	imagePanlbar : null,
 	constructor : function(b) {
 		Ext.applyIf(this, b);
 		this.initUIComponents();
-		My${tableName}Form.superclass.constructor.call(this, {
-			id : "My${tableName}FormWin",
+		My${viewName}Form.superclass.constructor.call(this, {
+			id : "My${viewName}FormWin",
 			layout : "fit",
 			items : this.formPanel,
 			modal : true,
 			height : 550,
 			width : 1030,
 			maximizable : true,
-			iconCls : "menu-${tableNameLowerCase}",
-			title : "编辑${tableName}",
+			iconCls : "menu-${obj.menuName}",
+			title : "编辑${obj.menu}",
 			buttonAlign : "center",
 			buttons : [ {
 				text : "保存",
@@ -47,7 +47,7 @@ My${tableName}Form = Ext.extend(Ext.Window, {
 			border : false,
 			items : [ {
 				xtype : "fieldset",
-				title : "${tableName}",
+				title : "${viewName}",
 				layout : "form",
 				flex : 2,
 				labelWidth : 60,
@@ -61,7 +61,7 @@ My${tableName}Form = Ext.extend(Ext.Window, {
 				<#list metas as meta>
 					<#if meta.colName == "id" > 
 					{  	
-						name : "${tableNameLowerCase}.id",
+						name : "${obj.menuName}.id",
 						xtype : "hidden",
 						value : this.id == null ? "" : this.id,
 						disabled : this.id == null ? true : false
@@ -69,7 +69,7 @@ My${tableName}Form = Ext.extend(Ext.Window, {
 					<#elseif meta.colName == "content">
 					{  	
 						fieldLabel : "${meta.colName}",
-						name : "${tableNameLowerCase}.${meta.colName}",
+						name : "${obj.menuName}.${meta.colName}",
 						allowBlank : false,
 						height : 360,
 						xtype : "fckeditor",
@@ -80,7 +80,7 @@ My${tableName}Form = Ext.extend(Ext.Window, {
 					<#else>
 					{  	
 						fieldLabel : "${meta.colName}",
-						name : "${tableNameLowerCase}.${meta.colName}",
+						name : "${obj.menuName}.${meta.colName}",
 						allowBlank : false,
 						maxLength : 128
 					},
@@ -94,9 +94,9 @@ My${tableName}Form = Ext.extend(Ext.Window, {
 		if (this.id != null && this.id != "undefined") {
 			var b = this.formPanel;
 			b.loadData({
-				url : __ctxPath + "/jf/${tableNameLowerCase}/detail?id=" + this.id,
+				url : __ctxPath + "/jf/${obj.controller}/${obj.menuName}/detail?id=" + this.id,
 				root : "data",
-				preName : "${tableNameLowerCase}",
+				preName : "${obj.menuName}",
 				success : function(a, h) {
 					var g = Ext.util.JSON.decode(a.responseText).data;
 				},
@@ -116,9 +116,9 @@ My${tableName}Form = Ext.extend(Ext.Window, {
 		$postForm({
 			formPanel : this.formPanel,
 			scope : this,
-			url : __ctxPath + "/jf/${tableNameLowerCase}/save",
+			url : __ctxPath + "/jf/${obj.controller}/${obj.menuName}/save",
 			callback : function(e, f) {
-				var d = Ext.getCmp("My${tableName}Grid");
+				var d = Ext.getCmp("My${viewName}Grid");
 				if (d != null) {
 					d.getStore().reload();
 				}

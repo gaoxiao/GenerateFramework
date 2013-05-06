@@ -9,7 +9,7 @@
 	<#-- 获取中文名称end -->
 	<Items id="${key}" text="${menuStr}" iconCls="menu-${key}" isPublic="true">
 		<#list menuList as menu>
-		<Item id="${menu.menuName}View" text="${menu.menu}" iconCls="menu-${menu.menuName}"/>  
+		<Item id="${menu.controller}${menu.menuName?cap_first}View" text="${menu.menu}" iconCls="menu-${menu.menuName}"/>  
 		</#list>
 	</Items>
 </#list>

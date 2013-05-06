@@ -1,11 +1,11 @@
-My${tableName}View = Ext.extend(Ext.Panel, {
+My${viewName}View = Ext.extend(Ext.Panel, {
 	constructor : function(b) {
 		Ext.applyIf(this, b);
 		this.initUIComponents();
-		My${tableName}View.superclass.constructor.call(this, {
-			id : "My${tableName}View",
-			title : "${tableName}管理",
-			iconCls : "menu-${tableNameLowerCase}",
+		My${viewName}View.superclass.constructor.call(this, {
+			id : "My${viewName}View",
+			title : "${obj.menu}管理",
+			iconCls : "menu-${obj.menuName}",
 			layout : "border",
 			items : [ /* this.searchPanel , */this.gridPanel ]
 		});
@@ -14,13 +14,13 @@ My${tableName}View = Ext.extend(Ext.Panel, {
 		this.topbar = new Ext.Toolbar({
 			items : [ {
 				iconCls : "btn-add",
-				text : "添加${tableName}",
+				text : "添加${obj.menu}",
 				xtype : "button",
 				scope : this,
 				handler : this.createRs
 			}, {
 				iconCls : "btn-del",
-				text : "删除${tableName}",
+				text : "删除${obj.menu}",
 				xtype : "button",
 				scope : this,
 				handler : this.removeSelRs
@@ -30,14 +30,14 @@ My${tableName}View = Ext.extend(Ext.Panel, {
 			region : "center",
 			tbar : this.topbar,
 			rowActions : true,
-			id : "My${tableName}Grid",
+			id : "My${viewName}Grid",
 			store : new Ext.data.Store({
 				baseParams : {
 					limit : 20,
 					start : 0
 				},
 				proxy : new Ext.data.HttpProxy({
-					url : __ctxPath + "/jf/${tableNameLowerCase}/all"
+					url : __ctxPath + "/jf/${obj.controller}/${obj.menuName}"
 				}),
 				reader : new Ext.data.JsonReader({
 					root : "list",
@@ -102,30 +102,30 @@ My${tableName}View = Ext.extend(Ext.Panel, {
 	},
 	rowClick : function(d, e, f) {
 		d.getSelectionModel().each(function(a) {
-			new My${tableName}Form({
+			new My${viewName}Form({
 				id : a.data.id
 			}).show();
 		});
 	},
 	createRs : function() {
-		new My${tableName}Form().show();
+		new My${viewName}Form().show();
 	},
 	removeRs : function(b) {
 		$postDel({
-			url : __ctxPath + "/jf/${tableNameLowerCase}/delete",
+			url : __ctxPath + "/jf/${obj.controller}/${obj.menuName}/delete",
 			ids : b,
 			grid : this.gridPanel
 		});
 	},
 	removeSelRs : function() {
 		$delGridRs({
-			url : __ctxPath + "/jf/${tableNameLowerCase}/delete",
+			url : __ctxPath + "/jf/${obj.controller}/${obj.menuName}/delete",
 			grid : this.gridPanel,
 			idName : "id"
 		});
 	},
 	editRs : function(b) {
-		new My${tableName}Form({
+		new My${viewName}Form({
 			id : b.data.id
 		}).show();
 	},

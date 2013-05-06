@@ -1,14 +1,14 @@
 package com.zjedu.dao;
 
 public class ExcelObject {
-	public String functionGroup;
-	public String functionGroupName;
+	public String functionGroup;// 功能组中文
+	public String functionGroupName;// 功能组英文
 
-	public String menuGroup;
-	public String menuGroupName;
+	public String menuGroup;// 分组中文
+	public String menuGroupName;// 分组英文
 
-	public String menu;
-	public String menuName;
+	public String menu;// 菜单中文
+	public String menuName;// 菜单英文
 
 	public String viewType;
 	public String model;
